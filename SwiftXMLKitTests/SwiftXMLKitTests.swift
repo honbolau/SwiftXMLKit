@@ -15,12 +15,12 @@ final class SwiftXMLKitTests: XCTestCase {
         doc.setRootElement(root)
         
         let child = XMLElement(name: "child", stringValue: "Hello World")
-        child.setAttribute("id", forName: "1")
+        child.setAttribute("1", forName: "id")
         root.addChild(child)
         
         let xmlString = try doc.xmlString()
         XCTAssertTrue(xmlString.contains("<root>"))
-        XCTAssertTrue(xmlString.contains("<child 1=\"id\">Hello World</child>"))
+        XCTAssertTrue(xmlString.contains("<child id=\"1\">Hello World</child>"))
     }
     
     func testXMLParsing() throws {
