@@ -26,7 +26,7 @@ Add SwiftXMLKit to your `Package.swift`:
 
 ```swift
 dependencies: [
-    .package(url: "your-repository-url", from: "1.0.0")
+    .package(url: "https://github.com/honbolau/SwiftXMLKit", from: "1.0.0")
 ]
 ```
 
